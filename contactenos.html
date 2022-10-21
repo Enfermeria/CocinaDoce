@@ -64,10 +64,6 @@
   <!-------------------------------------------------->
   <!-- Main con dos secciones: principal y noticias -->
   <main>
-    <!-- <br><br><br>
-    <p>Mándenos un <strong>correo electrónico</strong> <a href="mailto:jd_v@yahoo.com?subject=Contacto">Click para e-mail</a></p>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br> -->
-
     <div class="container_inscripcion">
       <br>
       <h1 class="logo">Inscríbase <span>Ya!!</span></h1>
@@ -75,37 +71,66 @@
       <div class="envoltorio_inscripcion_contacto">
         <div class="formulario_inscripcion">
           <h3>Inscripción</h3>
-          <form action="">
+          <form action="" id="formulario" method="get">
             <p>
               <label for="nombre">Apellido y Nombre</label>
-              <input type="text" name="nombre">
+              <input 
+                type="text" 
+                name="nombre" 
+                id="nombre" 
+                placeholder="Ingrese su nombre"
+                required 
+                pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" 
+                title="Sólo letras" 
+                minlength="3" 
+                maxlength="40"
+              >
             </p>
             <p>
               <label for="email">Email</label>
-              <input type="email" name="email">
+              <input 
+                type="email" 
+                name="email" 
+                id="email"
+                placeholder="Ingrese su correo"
+                autocomplete="off"
+                type="email"
+                required
+                pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$"
+                title="Ingrese un email válido"
+              >
             </p>
             <p>
               <label for="telefono">Número telefónico</label>
-              <input type="tel" name="telefono">
+              <input 
+                type="tel" 
+                name="telefono" 
+                id="telefono"
+                placeholder="Ingrese su teléfono"
+                autocomplete="off"
+                pattern="^[0-9\-()]{3,}$"
+                title="Ingrese un teléfono válido"
+              >
             </p>
             <p>
               <label for="sede">Elija una sede:</label>
               <select id="sede" name="sede">
                 <option value="tandil">Tandil</option>
                 <option value="capital">Capital Federal</option>
-                <!-- <option value="Moron">Olavarría</option> -->
               </select>
             </p>
             <p class="block">
               <label for="comentarios">Comentarios</label>
-              <textarea name="comentarios" rows="3"></textarea>
+              <textarea name="comentarios" id="comentarios" rows="3"></textarea>
             </p>
             <p class="block">
-              <button>Inscribirse</button>
+              <button type="submit">Inscribirse</button>
               <!-- <input type="submit"> -->
             </p>
           </form>
         </div>
+
+
         <div class="info_contacto">
           <h4>Sede Tandil</h4>
           <ul>
