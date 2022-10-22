@@ -34,6 +34,7 @@ Footer:
 /* Paleta de colores principal a usar*/
 :root {
     --color-fondo: DodgerBlue; /*SteelBlue;*/ /*MediumSeaGreen;*//*orange;   */
+    --color-fondo-claro: #ceeaf9;
     --color-hover: RoyalBlue;  /*Goldenrod;*/ /*Green;         *//*chocolate;*/
     --color-texto: white;
     --color-sombra: black;
@@ -171,7 +172,7 @@ header {
     padding: 0 0 0.5em 0;
 }
 
-button, .noticia a {
+button, #principal a, .noticia a {
     font-size: 1.25em;
     font-weight: bold;
     text-decoration: none;
@@ -187,7 +188,7 @@ button, .noticia a {
     transition: all 0.2s linear;
 }
 
-button:hover, .noticia a:hover {
+button:hover, #principal a:hover, .noticia a:hover {
     background-color: var(--color-hover);
     box-shadow: var(--sombra-btnhover);
     transform: translate(2px,-2px);
@@ -300,13 +301,13 @@ button:hover, .noticia a:hover {
 
 /********************  TARJETAS 3D DE RECETAS *******************/
 main h2 {
-    background: #ceeaf9;
+    background: var(--color-fondo-claro);
     padding-top: 60px;
     text-align: center;
 }
 
 .contenedor_tarjetas{
-    background: #ceeaf9;
+    background: var(--color-fondo-claro);
     /* max-width: 1200px; */
     margin: auto;
     margin-top: 0px;
@@ -416,6 +417,88 @@ main h2 {
     box-shadow: 1px 1px 30px 0px #449de6;
 }
 /******************  FIN TARJETAS 3D DE RECETAS ******************/
+
+
+
+
+
+
+
+/********************  RECETAS DE PLATOS   *******************/
+.contenedor_receta {
+    margin: 0 40px;
+    padding: 70px 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+    .contenedor_receta h2 {
+        color: var(--color-texto);
+        text-shadow: var(--sombra-titulo);
+        /* font-size: 25px; */
+        background: none;
+        padding: 0 5px 200px 5px;
+        margin-top: -250px;
+    }
+
+    .contenedor_receta h3{
+        font-size: 20px;
+        padding: 10px 5px 10px 5px;
+        text-align: center;
+    }
+
+    .contenedor_receta h4{
+        padding: 10px 25px 0 25px;
+    }
+
+    .contenedor_receta ul {
+        list-style-type: none;
+        padding-left: 100px;
+        padding-right: 30px;
+    }
+
+    .contenedor_receta p {
+        padding: 10px 25px;
+    }
+
+    .imagen_receta {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+        /* background-image: var(--lienzo); */
+    }
+
+    .imagen_receta img {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    .contenedor_receta .ingredientes {
+        background: var(--color-fondo-claro);
+        background-image: url("../img/ingredientes.svg");
+        background-repeat: no-repeat;
+        padding: 25px 20px 0 10px;
+    }
+
+    .contenedor_receta .ingredientes h3{
+        text-align: right;
+        padding-bottom: 50px;
+    }
+
+    .contenedor_receta .procedimiento {
+        background-image: url("../img/tablapicarv.svg");
+        padding-top: 220px;
+    }
+
+    .contenedor_receta .nutricional {
+        background: #BB8FCE;
+        border-radius: 20px;
+        padding: 10px 10px;
+    }
+
+/******************  FIN RECETAS DE PLATOS  ******************/
 
 
 
@@ -607,7 +690,13 @@ footer p a:hover {
         padding: 1em;
     }
 
-  
+    .contenedor_receta {
+        grid-template-columns: 1fr;
+    }
+
+    .contenedor_receta .ingredientes h3{
+        padding-bottom: 100px;
+    }
 }
 
 
@@ -679,6 +768,10 @@ footer p a:hover {
         grid-template-columns: 1fr;
     }
     
+    .contenedor_receta .ingredientes h3{
+        padding-bottom: 50px;
+    }
+
     footer .contenedor_footer {
         flex-direction: column;
         justify-content: center;
