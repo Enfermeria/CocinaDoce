@@ -489,6 +489,10 @@ main h2 {
 
     .contenedor_receta .procedimiento {
         background-image: url("../img/tablapicarv.svg");
+        /* background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-attachment:fixed;
+        background-position: center; */
         padding-top: 220px;
     }
 
@@ -696,6 +700,15 @@ footer p a:hover {
 
     .contenedor_receta .ingredientes h3{
         padding-bottom: 100px;
+    }
+
+    .contenedor_receta .procedimiento {
+        background-image: url("../img/tablapicarv.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        /* background-attachment:fixed; */
+        background-position: center;
+        padding-top: 120px;
     }
 }
 
