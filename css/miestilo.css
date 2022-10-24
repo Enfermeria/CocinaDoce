@@ -261,8 +261,8 @@ button:hover, #principal a:hover, .noticia a:hover {
 
 /**************************  NOSOTROS  **************************/
 #quienes_somos {
-    /* display: flex;
-    flex-direction: column; */
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -274,7 +274,7 @@ button:hover, #principal a:hover, .noticia a:hover {
     background-size: cover;
     background-position: center center;
     color: var(--color-texto);
-    font-size: 1.3em;
+    font-size: 1.8vw;
 }
 
 #quienes_somos h1{margin:0.5em}
@@ -292,6 +292,11 @@ button:hover, #principal a:hover, .noticia a:hover {
 .subrayado {
     text-decoration-line: underline;
     text-decoration-style: wavy;
+}
+
+#listado_alumnos {
+    text-align: center;
+    background: var(--color-fondo-claro);
 }
 /**************************  FIN NOSOTROS  **************************/
 
