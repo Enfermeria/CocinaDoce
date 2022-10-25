@@ -53,7 +53,7 @@ Footer:
 }
 
 
-/*********************** Pantalla grande > 1024 **************************/
+/*********************** Pantalla muy grande > 1024 **************************/
 h1{ font-size: 3.5em;}
 h2{ font-size: 2.7em;}
 h3{ font-size: 2em;}
@@ -261,8 +261,8 @@ button:hover, #principal a:hover, .noticia a:hover {
 
 /**************************  NOSOTROS  **************************/
 #quienes_somos {
-    display: flex;
-    flex-direction: column;
+    /*display: flex;
+    flex-direction: column;*/
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -274,10 +274,13 @@ button:hover, #principal a:hover, .noticia a:hover {
     background-size: cover;
     background-position: center center;
     color: var(--color-texto);
-    font-size: 1.8vw;
+    font-size: 1.7vw;
 }
 
-#quienes_somos h1{margin:0.5em}
+#quienes_somos h1{
+    margin:0.5em;
+    padding-top: 20px;
+}
 
 #quienes_somos p{
     padding: 0 50px;
@@ -287,7 +290,9 @@ button:hover, #principal a:hover, .noticia a:hover {
 #quienes_somos ul{
     padding: 0 50px;
     margin: 0.0em;
+    list-style: none;
 }
+
 
 .subrayado {
     text-decoration-line: underline;
@@ -670,7 +675,7 @@ footer p a:hover {
  ****                           Media queries                            ****
  ****************************************************************************/
 
-/****************** Pantalla mediana <= 1024 *******************/
+/****************** Pantalla grande <= 1024 *******************/
 @media screen and (max-width: 1024px) { 
 
     #titulo {
@@ -802,7 +807,7 @@ footer p a:hover {
 
 
 
-/****************** Pantalla mediana < 576 (min 400) *******************/
+/****************** Pantalla chica < 576 (min 400) *******************/
 @media screen and (max-width: 576px) and (min-width: 400px) { 
 
     .contenedor_menu{
